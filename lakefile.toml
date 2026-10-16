@@ -1,5 +1,6 @@
 name = "DedekindSubgroups"
-defaultTargets = ["DedekindSubgroups"]
+version = "1.1.0"
+defaultTargets = ["DedekindSubgroups", "Challenge", "Solution"]
 
 [[require]]
 name = "mathlib"
@@ -8,3 +9,11 @@ rev = "v4.35.0"
 
 [[lean_lib]]
 name = "DedekindSubgroups"
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

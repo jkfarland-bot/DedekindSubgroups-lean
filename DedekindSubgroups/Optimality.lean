@@ -1,9 +1,13 @@
+module
+
 /-
   Optimality of the modulus 16 in Theorem 1.1: the subgroups `⟨4⟩ = {1, 4, 16}` and
   `⟨22⟩ = {1, 22, 43}` of `(ℤ/63ℤ)ˣ` both have order 3, and `12·63·S(H,63)` equals `5586` and `4290`,
   which are incongruent modulo 32.
 -/
-import DedekindSubgroups.Prime
+public import DedekindSubgroups.Prime
+
+@[expose] public section
 
 open Finset
 

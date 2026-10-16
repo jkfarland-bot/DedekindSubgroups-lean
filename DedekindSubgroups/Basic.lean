@@ -1,9 +1,13 @@
+module
+
 /-
   Dedekind sums over subgroups: basic definitions and finite-sum identities.
   Formalization accompanying J. S. Farland, "A congruence modulo 16 for sums of Dedekind sums
   over subgroups of odd order".
 -/
-import Mathlib
+public import Mathlib
+
+@[expose] public section
 
 open Finset
 

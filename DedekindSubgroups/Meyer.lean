@@ -1,7 +1,11 @@
+module
+
 /-
   Meyer's formula `12 k s(h,k) = (k-1)(k-2) - 4 I(h,k)`.
 -/
-import DedekindSubgroups.Basic
+public import DedekindSubgroups.Basic
+
+@[expose] public section
 
 open Finset
 
@@ -116,8 +120,6 @@ theorem meyer_int (h k : ℕ) (hk : 0 < k) :
     _ = ∑ r ∈ range k, (2 * (k : ℤ) - 1 - 3 * r) * sig h k r := by
         simp only [← sum_sub_distrib, ← sum_add_distrib]
         refine sum_congr rfl ?_; intro r _; ring
-
-
 
 /-! ### From inversions to the Dedekind sum -/
 

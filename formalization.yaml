@@ -1,0 +1,178 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "DedekindSubgroups: a congruence modulo 16 for sums of Dedekind sums over subgroups of odd order"
+  description: >-
+    For k >= 2 and a subgroup H of odd order n of the unit group (Z/kZ)^x, the sum
+    S(H,k) of the Dedekind sums s(h,k) over h in H satisfies: 12k S(H,k) is an integer
+    congruent to n(k-1)(k-2) modulo 16, and the modulus 16 cannot be replaced by 32
+    (an explicit pair of order-3 subgroups of (Z/63Z)^x). The development also proves
+    a congruence modulo 8 for every subgroup, a congruence for 2k S(H,k) when 3 does
+    not divide k, and, for primes p > 3 and n > 1, that 2S(H,p) is an integer congruent
+    to n(p-1)/2 modulo 8, which refines Louboutin's parity theorem and gives
+    12S(H,p) - p congruent to 3n(p-1) - p modulo 48. The proof formalizes Meyer's
+    formula 12k s(h,k) = (k-1)(k-2) - 4I(h,k), where I(h,k) counts the inversions of
+    x -> hx mod k, and the facts that these inversion counts are even on squares and
+    equal for inverse elements.
+  authors:
+    - "Joseph S. Farland"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Joseph S. Farland"
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11F20", "11M20", "68V20"]
+
+sources:
+  - title: "A congruence modulo 16 for sums of Dedekind sums over subgroups of odd order"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Manuscript, October 2026; the formalization is archived as Zenodo record https://doi.org/10.5281/zenodo.23424615"
+    relationship: "formalizes"
+    note: >-
+      The paper and this formalization have the same author. Theorems 1.1 and 1.2, the
+      optimality of the modulus 16, Remark 3.4 (first display), Corollary 4.1 and all
+      lemmas of Sections 2 to 4 are formalized.
+    license: "unknown"
+    author_endorsement: "participated"
+  - title: "Über einige Anwendungen Dedekindscher Summen"
+    authors:
+      - "Curt Meyer"
+    type: "article"
+    location: "J. Reine Angew. Math. 198 (1957), 143-203"
+    relationship: "background"
+    note: "Source of Meyer's formula relating 12k s(h,k) to the inversion count I(h,k), which the development reproves."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "On the denominator of Dedekind sums"
+    authors:
+      - "Stéphane R. Louboutin"
+    type: "article"
+    location: "Bull. Korean Math. Soc. 56 (2019), 815-827"
+    relationship: "background"
+    note: "Theorem 6(ii) proves that 2S(H,p) is an integer of the parity of (p-1)/2; Theorem 1.2 here refines it modulo 8 with an independent proof of the integrality."
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Dedekind sums and mean square value of L(1,chi) over subgroups"
+    authors:
+      - "Stéphane R. Louboutin"
+    type: "article"
+    location: "Publ. Math. Debrecen 106 (2025), 387-403"
+    relationship: "background"
+    note: "Defines N(H,p) = 12S(H,p) - p and its role in the mean square of L(1,chi) over odd characters trivial on H."
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Dedekind Sums"
+    authors:
+      - "Hans Rademacher"
+      - "Emil Grosswald"
+    type: "book"
+    location: "Carus Mathematical Monographs 16, Mathematical Association of America, 1972"
+    relationship: "background"
+    note: "Standard reference for Dedekind sums and the bound on their denominators used in Corollary 4.1."
+    license: "unknown"
+    author_endorsement: "n/a"
+
+related_formalizations:
+  - id: "https://isa-afp.org/entries/Dedekind_Sums.html"
+    relationship: "independent"
+    note: "Isabelle/HOL formalization of Dedekind sums and their reciprocity law (Eberl, Bordg, Paulson, Li, 2025). This Lean development shares no code with it and does not use reciprocity."
+  - id: "https://doi.org/10.5281/zenodo.23424615"
+    relationship: "supersedes"
+    note: "Release v1.0 of this repository. Version 1.1 adds the Challenge/Solution split, Lean's module system and this metadata; the mathematics and proofs are unchanged."
+
+status:
+  scope: >-
+    Formalized: the definitions of the sawtooth function, the Dedekind sum s(h,k) for
+    natural numbers h and k, the subgroup sum S(H,k) and the inversion count I(h,k); the
+    residue form of s(h,k); Meyer's formula; the integrality of 2k s(h,k) when 3 does
+    not divide k; the inverse and square lemmas for I(h,k); Theorem 1.1 and the
+    optimality of the modulus 16; Remark 3.4 (the congruence modulo 8 for every
+    subgroup); Corollary 4.1; Lemma 4.2; and Theorem 1.2 in both of its forms.
+    Theorem 1.1 is stated for every k > 1 rather than k >= 3 as in the paper; for k = 2
+    it is trivial. Not formalized: the sentence of Remark 3.4 that uses Zolotarev's lemma
+    and Jacobi symbols (not in Mathlib), the numerical Remark 4.3, and the heuristic
+    Section 5 on Louboutin's Conjecture 3(ii).
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude (Anthropic)"]
+      framework: "Claude.ai with code execution"
+      tool_setup: >-
+        AI-assisted: the Lean code was drafted and repaired by Claude against the
+        author's paper, compiled locally with lake, and checked with #print axioms and
+        Palomar's lake comparator script. The mathematics, statements and paper are the
+        author's.
+      cost:
+        wall_time: "about one day"
+        spend_usd: "subscription-based"
+        hardware: "API-only plus local machine"
+      prompting_notes: "The model was given the paper's statements and proofs section by section and asked to formalize them without sorry or native_decide."
+  spend_usd: "subscription-based"
+  notes: >-
+    The author wrote the paper and its proofs. Claude produced the Lean formalization
+    from them under the author's direction; the author reviewed the formal statements in
+    Challenge.lean against the paper. Independent numerical checks by exact rational
+    arithmetic (reported in the paper) agree with every formalized statement.
+
+fidelity:
+  divergences: >-
+    The sawtooth function is defined on rationals through Int.fract, and s(h,k) sums over
+    r = 0, ..., k-1; the extra term r = 0 vanishes, so this is the classical sum. Units of
+    ZMod k are represented by their least nonnegative residues. The permutation of
+    multiplication by h is taken on {0, ..., k-1}, which does not change I(h,k). Theorem
+    1.1 is stated for k > 1 instead of k >= 3. The integrality claims are stated as the
+    existence of an integer equal to the rational quantity.
+
+review:
+  status: "self-assessed"
+  reviewers:
+    - "Joseph S. Farland"
+  notes: >-
+    The author compared each statement in Challenge.lean with the corresponding result
+    of the paper. The definitions in Challenge.lean are copied verbatim from the
+    development and compared by Comparator. No external referee has reviewed the paper
+    or the formalization.
+
+alignment:
+  namespace: "DedekindSubgroups"
+  statements:
+    - source: "Theorem 1.1, congruence"
+      lean: "DedekindSubgroups.theorem_1_1"
+      module: "Challenge"
+      status: "proved"
+      note: "Stated for every k > 1; the paper assumes k >= 3."
+    - source: "Theorem 1.1, optimality of the modulus 16"
+      lean: "DedekindSubgroups.theorem_1_1_optimal"
+      module: "Challenge"
+      status: "proved"
+      note: "The subgroups generated by 4 and by 22 in (Z/63Z)^x, with 12·63·S(H,63) = 5586 and 4290."
+    - source: "Remark 3.4, first display"
+      lean: "DedekindSubgroups.remark_3_4"
+      module: "Challenge"
+      status: "proved"
+      note: "The Jacobi-symbol reformulation in the same remark is not formalized."
+    - source: "Corollary 4.1"
+      lean: "DedekindSubgroups.corollary_4_1"
+      module: "Challenge"
+      status: "proved"
+      note: "Stated as 2x ≡ 3n(k-1)(k-2) (mod 16) for the integer x = 2k S(H,k), equivalent to the paper's congruence modulo 8."
+    - source: "Theorem 1.2, congruence for 2S(H,p)"
+      lean: "DedekindSubgroups.theorem_1_2"
+      module: "Challenge"
+      status: "proved"
+      note: "Includes the integrality of 2S(H,p)."
+    - source: "Theorem 1.2, equivalent form for N(H,p)"
+      lean: "DedekindSubgroups.theorem_1_2_louboutin"
+      module: "Challenge"
+      status: "proved"
+      note: "N(H,p) = 12S(H,p) - p ≡ 3n(p-1) - p (mod 48)."
+
+acknowledgements: "Lean 4 and Mathlib; Claude (Anthropic) for formalization assistance; the Palomar starter template for the check scripts."

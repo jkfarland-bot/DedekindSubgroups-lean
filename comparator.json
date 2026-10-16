@@ -1,0 +1,21 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "DedekindSubgroups.theorem_1_1",
+    "DedekindSubgroups.theorem_1_1_optimal",
+    "DedekindSubgroups.remark_3_4",
+    "DedekindSubgroups.corollary_4_1",
+    "DedekindSubgroups.theorem_1_2",
+    "DedekindSubgroups.theorem_1_2_louboutin"
+  ],
+  "definition_names": [
+    "DedekindSubgroups.sawtooth",
+    "DedekindSubgroups.dedekindSum",
+    "DedekindSubgroups.sig",
+    "DedekindSubgroups.inv",
+    "DedekindSubgroups.subgroupSum"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

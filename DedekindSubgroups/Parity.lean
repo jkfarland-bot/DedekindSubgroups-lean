@@ -1,7 +1,11 @@
+module
+
 /-
   Inversions of `z ↦ h z mod k`: symmetry under `h ↦ h⁻¹`, and evenness for squares.
 -/
-import DedekindSubgroups.Meyer
+public import DedekindSubgroups.Meyer
+
+@[expose] public section
 
 open Finset Equiv
 

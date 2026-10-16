@@ -1,7 +1,11 @@
-import DedekindSubgroups.Basic
-import DedekindSubgroups.Meyer
-import DedekindSubgroups.Parity
-import DedekindSubgroups.Main
-import DedekindSubgroups.General
-import DedekindSubgroups.Prime
-import DedekindSubgroups.Optimality
+module
+
+public import DedekindSubgroups.Basic
+public import DedekindSubgroups.Meyer
+public import DedekindSubgroups.Parity
+public import DedekindSubgroups.Main
+public import DedekindSubgroups.General
+public import DedekindSubgroups.Prime
+public import DedekindSubgroups.Optimality
+
+@[expose] public section

@@ -1,8 +1,12 @@
+module
+
 /-
   Main theorem: for a subgroup `H` of odd order `n` of `(ℤ/kℤ)ˣ`,
   `12 k ∑_{h ∈ H} s(h,k)` is an integer congruent to `n (k-1)(k-2)` modulo 16.
 -/
-import DedekindSubgroups.Parity
+public import DedekindSubgroups.Parity
+
+@[expose] public section
 
 open Finset
 

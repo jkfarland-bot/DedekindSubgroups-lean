@@ -1,3 +1,5 @@
+module
+
 /-
   Moduli prime to 3, and prime moduli.
 
@@ -7,7 +9,9 @@
   * `two_mul_subgroupSum_prime` : Theorem 1.2, `2 S(H,p) ∈ ℤ` and `2 S(H,p) ≡ n (p-1)/2 (mod 8)`.
   * `louboutin_N_modEq` : `N(H,p) = 12 S(H,p) - p ≡ 3 n (p-1) - p (mod 48)`.
 -/
-import DedekindSubgroups.Main
+public import DedekindSubgroups.Main
+
+@[expose] public section
 
 open Finset
 

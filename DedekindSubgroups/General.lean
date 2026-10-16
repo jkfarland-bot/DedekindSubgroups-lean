@@ -1,8 +1,12 @@
+module
+
 /-
   Remark 3.4: for an arbitrary subgroup `H` of `(ℤ/kℤ)ˣ`,
   `12 k S(H,k) ≡ |H| (k-1)(k-2) - 4 ∑_{h ∈ H, h² = 1} I(h,k)  (mod 8)`.
 -/
-import DedekindSubgroups.Main
+public import DedekindSubgroups.Main
+
+@[expose] public section
 
 open Finset
 
