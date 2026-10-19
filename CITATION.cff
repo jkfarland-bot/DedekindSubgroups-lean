@@ -14,3 +14,12 @@ keywords:
   - Lean 4
   - Mathlib
   - formal verification
+preferred-citation:
+  type: article
+  title: "A congruence modulo 16 for sums of Dedekind sums over subgroups of odd order"
+  authors:
+    - family-names: Farland
+      given-names: Joseph S.
+  year: 2026
+  doi: 10.5281/zenodo.23425872
+  notes: "Preprint, version 1, Zenodo"
