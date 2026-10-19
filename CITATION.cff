@@ -4,8 +4,8 @@ title: "DedekindSubgroups-lean: a Lean 4 formalization of a congruence modulo 16
 authors:
   - family-names: Farland
     given-names: Joseph S.
-version: v1.1
-date-released: 2026-10-16
+version: v1.1.1
+date-released: 2026-10-19
 doi: 10.5281/zenodo.23424615
 license: Apache-2.0
 repository-code: "https://github.com/jkfarland-bot/DedekindSubgroups-lean"

@@ -123,7 +123,7 @@ theorem E_modp {p : ℕ} [hp : Fact p.Prime] (hp3 : 3 < p) (hinv : h * h' % p = 
     have := congrArg (fun z : ℤ => (z : ZMod p)) hkey
     simp only [Int.cast_sub, Int.cast_mul, Int.cast_pow, Int.cast_add, Int.cast_one,
       Int.cast_natCast, Int.cast_ofNat, ZMod.natCast_self, zero_mul, mul_zero, zero_pow two_ne_zero,
-      sub_zero] at this
+      sub_zero, sub_self] at this
     have hh0 : (h : ZMod p) ≠ 0 := left_ne_zero_of_mul_eq_one hhh
     rcases mul_eq_zero.mp this with h1 | h1
     · exact absurd h1 (mul_ne_zero h12 hh0)

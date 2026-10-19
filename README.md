@@ -3,7 +3,7 @@
 Lean 4 / Mathlib formalization accompanying J. S. Farland, *A congruence modulo 16 for sums of
 Dedekind sums over subgroups of odd order* (preprint, [doi:10.5281/zenodo.23425872](https://doi.org/10.5281/zenodo.23425872)).
 
-Toolchain: `leanprover/lean4:v4.35.0`, Mathlib `v4.35.0`.
+Toolchain: `leanprover/lean4:v4.35.0-rc2`, Mathlib `v4.35.0-rc2` (the versions used by the Palomar template; the Verso renderer for Lean v4.35.0 cannot render a `module` Challenge). Release v1.0 was built with Lean and Mathlib `v4.35.0`.
 
 ```
 lake exe cache get
