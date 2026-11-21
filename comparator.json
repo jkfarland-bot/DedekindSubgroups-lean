@@ -9,13 +9,7 @@
     "DedekindSubgroups.theorem_1_2",
     "DedekindSubgroups.theorem_1_2_louboutin"
   ],
-  "definition_names": [
-    "DedekindSubgroups.sawtooth",
-    "DedekindSubgroups.dedekindSum",
-    "DedekindSubgroups.sig",
-    "DedekindSubgroups.inv",
-    "DedekindSubgroups.subgroupSum"
-  ],
+  "definition_names": [],
   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
   "enable_nanoda": true
 }
