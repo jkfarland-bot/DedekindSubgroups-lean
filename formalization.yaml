@@ -195,7 +195,10 @@ review:
   notes: >-
     The author compared each statement in Challenge.lean with the corresponding result
     of the paper. The definitions in Challenge.lean are copied verbatim from the
-    development and compared by Comparator. No external referee has reviewed the paper
+    development and compared by Comparator, bodies included: comparator.json lists no
+    definition holes (definition_names is empty since v1.1.2; in v1.1.1 the five
+    definitions were listed as holes, so only their names and types were compared).
+    No external referee has reviewed the paper
     or the formalization.
 
 alignment:

@@ -23,7 +23,10 @@ now uses Lean's `module` system.
   (`sawtooth`, `dedekindSum`, `sig`, `inv`, `subgroupSum`) exactly as the development has them and
   states the six headline results with `sorry`.
 - `Solution.lean` proves the same six declarations from the development in `DedekindSubgroups/`.
-- `comparator.json` lists the compared theorems and definitions and the permitted axioms.
+- `comparator.json` lists the compared theorems and the permitted axioms. Its `definition_names`
+  is empty, so Comparator compares every definition the statements use with the development's,
+  bodies included (v1.1.1 listed the five definitions as holes, which compares only their names
+  and types).
 - `formalization.yaml` records authorship, sources, AI assistance, scope and fidelity.
 - `scripts/` holds Palomar's checks, copied from the
   [Palomar starter template](https://github.com/PalomarRegistry/PalomarTemplate).
