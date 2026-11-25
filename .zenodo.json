@@ -1,0 +1,33 @@
+{
+  "title": "DedekindSubgroups-lean: a Lean 4 formalization of a congruence modulo 16 for sums of Dedekind sums over subgroups",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Farland, Joseph S.",
+      "orcid": "0009-0007-6809-804X"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "Dedekind sums",
+    "Lean 4",
+    "Mathlib",
+    "formal verification"
+  ],
+  "description": "<p>Lean 4 / Mathlib formalization accompanying J. S. Farland, \"A congruence modulo 16 for sums of Dedekind sums over subgroups of odd order\" (doi:10.5281/zenodo.23425871). Let k &gt;= 3 and let H be a subgroup of odd order n of (Z/kZ)^x. The development proves that 12k times the sum of the Dedekind sums s(h, k) over h in H is congruent to n(k - 1)(k - 2) modulo 16, and that the modulus 16 is best possible. The proof follows the paper: Meyer's formula expresses 12k s(h, k) through the number of inversions of the permutation x -&gt; hx of {1, ..., k - 1}; every element of H is a square in H, so each such permutation is even; and inverse elements give the same number of inversions. For a prime p &gt; 3 this yields 2S(H, p) = n(p - 1)/2 modulo 8, a refinement of Louboutin's theorem that 2S(H, p) is an integer of the parity of (p - 1)/2, together with an elementary proof of that integrality. Theorems 1.1 and 1.2, the optimality of the modulus and all lemmas of Sections 2 to 4 of the paper are verified.</p>\n<p>The statements are in Challenge.lean. Lean's comparator checks them against the proofs, with the definition bodies compared, and the proofs are replayed in the Lean, nanoda and con-ron kernels. No sorry, no native_decide; standard axioms only. The changes in each version are described in the release notes on GitHub: <a href=\"https://github.com/jkfarland-bot/DedekindSubgroups-lean/releases\">github.com/jkfarland-bot/DedekindSubgroups-lean/releases</a>.</p>",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23425871",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/jkfarland-bot/DedekindSubgroups-lean",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "AI assistance: the Lean code in this record was drafted and repaired by Claude (Anthropic), an AI model, from the statements and proofs of the companion paper \"A congruence modulo 16 for sums of Dedekind sums over subgroups of odd order\" (doi:10.5281/zenodo.23425871), and compiled locally with lake. Every proof is checked by the Lean kernel, and Comparator replays the solution against the statement file under the Lean, NanoDa and con-ron kernels. The author, Joseph S. Farland, chose the scope, directed the work, and is responsible for the contents. No external human reviewer has checked the formalization."
+}

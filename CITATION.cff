@@ -4,6 +4,7 @@ title: "DedekindSubgroups-lean: a Lean 4 formalization of a congruence modulo 16
 authors:
   - family-names: Farland
     given-names: Joseph S.
+    orcid: "https://orcid.org/0009-0007-6809-804X"
 version: v1.1.2
 date-released: 2026-11-20
 doi: 10.5281/zenodo.23424615
@@ -20,6 +21,7 @@ preferred-citation:
   authors:
     - family-names: Farland
       given-names: Joseph S.
+      orcid: "https://orcid.org/0009-0007-6809-804X"
   year: 2026
   doi: 10.5281/zenodo.23425872
   notes: "Preprint, version 1, Zenodo"
